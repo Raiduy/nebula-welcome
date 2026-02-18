@@ -2,6 +2,18 @@
   "name": "nebula-welcome",
   "type": "module",
   "version": "0.0.1",
+  "description": "Repository for the Nebula user documentation",
+  "author": "Network Institute <network.institute.beta@vu.nl> (https://github.com/networkinstitutevu/)",
+  "license": "MIT",
+  "keywords": [
+    "Network Institute",
+    "NI",
+    "nebula",
+    "VU Amsterdam",
+    "Vrije Universiteit Amsterdam",
+    "astro",
+    "user documentation"
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
