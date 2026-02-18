@@ -1,0 +1,42 @@
+---
+title: Welcome to Nebula
+description: Nebula is the 
+template: splash
+hero:
+  tagline: This is the Nebula User documentation. Here you can request access to Nebula and read our guides on how to use Nebula.
+  image:
+    file: ../../../public/NI_logo_mixed.png  
+  actions:
+    - text: Nebula User Guide
+      link: /welcome/guides/example/
+      icon: right-arrow
+    - text: Log In to Nebula
+      link: https://nebula.cs.vu.nl
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Next steps
+
+<CardGrid stagger>
+	<Card title="Request Access to Nebula" icon="pencil">
+		To access Nebula, fill in 
+        <a href="https://forms.gle/8ziuLPTWYivdf2em9" target='_blank'>this form</a>.
+        Please log in with your <b>VU account</b> to access the form.
+	</Card>
+	<Card title="Change page layout" icon="document">
+		Delete `template: splash` in `src/content/docs/index.mdx` to display a
+		sidebar on this page.
+	</Card>
+	<Card title="Add new content" icon="add-document">
+		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	</Card>
+	<Card title="Configure your site" icon="setting">
+		Edit your `sidebar` and other config in `astro.config.mjs`.
+	</Card>
+	<Card title="Read the docs" icon="open-book">
+		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	</Card>
+</CardGrid>
