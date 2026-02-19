@@ -1,5 +1,5 @@
 # Starlight Starter Kit: Basics
-this is a new change
+This is a new change
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
 ```
