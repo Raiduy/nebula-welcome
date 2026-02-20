@@ -1,6 +1,6 @@
 ---
 title: Nebula Basic Use
-description: A guide in bow to use Nebula platform
+description: A guide on the basic use of Nebula platform
 ---
 
 <!-- We can put a brief introduction to Nebula platform in this section -->
@@ -67,7 +67,7 @@ information to the Knowledge Bases!
 If you need to use knowledge bases with sensitive information for your project, please
 contact us (nebula.cs@vu.nl) and we can discuss options.
 
-#### Creating knowledge bases
+### Creating knowledge bases
 
 1. Navigate to **Workspace**, then click on **Knowledge**. You should see all the
 Knowledge Bases that are public on Nebula with the <img src="/src/content/docs/guides/image-5.png" style="display:inline;margin:0;">tag.
@@ -93,7 +93,52 @@ knowledge base by clicking on the plus button on the bottom of the prompt box.
 Tables in PDF files cannot be read. We are working on a solution, thank you for
 understanding.**
 
+### Editing knowledge bases
 
+1. Navigate to the knowledge tab (Workspace -> Knowledge)
+2. Click on the knowledge base you want to edit. You can only edit knowledge bases that do not have the  <img src="/src/content/docs/guides/image-5.png" style="display:inline;margin:0;"> tag.
+
+### Deleting knowledge bases
+
+1. Navigate to the knowledge tab (Workspace -> Knowledge).
+2. Click on the three horizontal dots next to your knowledge base. You can only delete knowledge bases that do not have the  <img src="/src/content/docs/guides/image-5.png" style="display:inline;margin:0;"> tag.
+3. Click on **Delete**.
+
+     a. All files in the knowledge base are going to be removed from the server as soon as you delete the knowledge base, and within 7 days from all backups.
+
+## Models 
+
+The Models tab allows you to create your own custom models by setting system prompts, attaching knowledge bases by default (no more need to click on the + button when prompting), or adjusting the advanced parameters. By attaching a knowledge base, you are creating a RAG system. See [here]() for the official documentation.
+
+### Creating Models
+
+1. Navigate to **Workspace**, then click on **Models**. You should see all the models created by other users that are public on Nebula.
+2. Click on the <img src="/src/content/docs/guides/image-13.png" style="display:inline;margin:0;"> button on the top right of the screen.
+3. Follow the instructions on the screen for creating the Model.
+
+     a. We recommend setting a System Prompt. Example: “You are a helpful assistant”
+
+    b. Please have a look at the [Advanced Parameters](), and [Modifying Advanced Parameters]() sections if you want to edit the advanced parameters section
+4. Click on **Save & Create**.
+
+### Editing Models
+
+1. Navigate to the models tab (Workspace -> Models).
+2. On the model you want to edit, click on the  <img src="/src/content/docs/guides/image-3.png" height="20" style="margin:0; display: inline;"/>, then <img src="/src/content/docs/guides/image-14.png" height="20" style="margin:0; display: inline;"/> . You can only edit models that do not have the <img src="/src/content/docs/guides/image-6.png" height="20" style="margin:0; display: inline;"/> tag.
+3. Edit your model.
+4. Click on **Save & Update**.
+
+### Deleting Models
+
+1. Navigate to the models tab (Workspace -> Models).
+2. Click on the three horizontal dots next to your knowledge base. You can only delete models that do not have the <img src="/src/content/docs/guides/image-6.png" height="20" style="margin:0; display: inline;"/>  tag.
+3. Click on **Delete**.
+
+## Prompts
+
+Prompts allow you to save prompts that you use often and add variables inside of these
+prompts.
+See [here]() for the official documentation.
 
 
 
