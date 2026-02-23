@@ -7,6 +7,9 @@ hero:
   image:
     file: ../../../public/NI_logo_mixed.png  
   actions:
+    - text: Request Access to Nebula (VU Login)
+      link: https://forms.gle/8ziuLPTWYivdf2em9
+      icon: external
     - text: Nebula User Guide
       link: /welcome/guides/example/
       icon: right-arrow
@@ -21,17 +24,16 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 ## Next steps
 
 <CardGrid stagger>
-	<Card title="Request Access to Nebula" icon="pencil">
+	<Card title="Request Access to Nebula" icon="document">
 		To access Nebula, fill in 
         <a href="https://forms.gle/8ziuLPTWYivdf2em9" target='_blank'>this form</a>.
         Please log in with your <b>VU account</b> to access the form.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="I Need Help" icon="pencil">
+		Contact us at <a href="mailto:nebula.cs@vu.nl" target='_blank'>nebula.cs@vu.nl</a>.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Help Us Improve this Site" icon="add-document">
+		Visit our <a href="https://github.com/networkinstitutevu/nebula-welcome" target='_blank'>GitHub Repository</a> and add an Issue, or submit a Pull Request.
 	</Card>
 	<Card title="Configure your site" icon="setting">
 		Edit your `sidebar` and other config in `astro.config.mjs`.

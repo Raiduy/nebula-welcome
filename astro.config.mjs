@@ -10,6 +10,10 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Welcome to Nebula',
+			logo: {
+				src: './src/assets/nebula-logo.png',
+				replacesTitle: true
+			},
 			social: [
 				{
 					icon: 'puzzle',
@@ -19,7 +23,7 @@ export default defineConfig({
 				{
 					icon: 'github',
 					label: 'GitHub',
-					href: 'https://github.com/withastro/starlight'
+					href: 'https://github.com/networkinstitutevu/nebula-welcome'
 				}
 			],
 			sidebar: [
@@ -29,6 +33,28 @@ export default defineConfig({
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Example Guide', slug: `guides/example` },
 					],
+				},
+				{
+					label: 'Privacy',
+					items: [
+						{ label: 'How does Nebula run?', slug: `privacy/running` },
+						{ label: 'Encryption', slug: `privacy/encryption` },
+						{ label: 'Conversations', slug: `privacy/conversations` },
+						{ label: 'Knowledge Bases, Folders, and System Prompts', slug: `privacy/kb-f-sp` },
+					]
+				},
+				{
+					label: 'Security and Backup',
+					items: [
+						{ label: 'Security', slug: `security-and-backup/security` },
+						{ label: 'Backup', slug: `security-and-backup/backup` }
+					]
+				},
+				{
+					label: 'FAQ',
+					items: [
+						{ label: 'FAQs', slug: `faqs/faq` }
+					]
 				},
 				{
 					label: 'Reference',
