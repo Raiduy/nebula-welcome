@@ -62,6 +62,7 @@ export default defineConfig({
 						{ label: 'Encryption', slug: `privacy/encryption` },
 						{ label: 'Conversations', slug: `privacy/conversations` },
 						{ label: 'Knowledge Bases, Folders, and System Prompts', slug: `privacy/kb-f-sp` },
+						{ label: 'Who can access the servers?', slug: `privacy/server-access` },
 					]
 				},
 				{
