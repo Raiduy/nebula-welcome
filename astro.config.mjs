@@ -31,7 +31,7 @@ export default defineConfig({
 					label: 'Nebula Basic Use',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Getting to Know the Platform', slug: `guides/example` },
+						{ label: 'Getting to Know the Platform', slug: `gettingToKnowPlatform` },
 						{ label: 'Changing Password', slug: `changingPassword` },
 						{ label: 'Saving Chats', slug: `savingChats` },
 						{ label: 'Setting a default System Prompt', slug: `settingDefaultPrompts` },
