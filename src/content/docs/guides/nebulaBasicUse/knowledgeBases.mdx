@@ -1,0 +1,54 @@
+---
+title: Knowledge Bases
+slug: knowledgeBases
+---
+
+Knowledge bases allow you to add files that the models can reference when giving you an
+answer, thus decreasing the chances of the model hallucinating. In more technical terms,
+using a knowledge base with a model creates a form of Retrieval Augmented Generation
+(RAG).
+See [here]() for the official documentation.
+
+<span style="color:red; font-weight:bold;">WARNING: Knowledge bases are saved on the server! DO NOT upload sensitive
+information to the Knowledge Bases!</span>
+
+If you need to use knowledge bases with sensitive information for your project, please
+contact us (nebula.cs@vu.nl) and we can discuss options.
+
+### Creating knowledge bases
+
+1. Navigate to **Workspace**, then click on **Knowledge**. You should see all the Knowledge Bases that are public on Nebula with the <img src="/src/assets/readOnly.png" style="display:inline;margin:0;"/> tag.
+2. Click on the<img src="/src/assets/knowledgeBtn.png" style="display:inline;margin:0;"/> button on the top right of the screen.
+3. Follow the instructions on the screen for creating the Knowledge Base
+4. Click the <img src="/src/assets/plusBtn.png" style="display:inline;margin:0; width:16px;"/> button  at the top right of your screen and choose what to upload:
+
+   a.<img src="/src/assets/uploadFileBtn.png" style="display:inline;margin:0;height:22px;"/> allows you to upload individual files.
+
+   b.<img src="/src/assets/uploadDirBtn.png" style="display:inline;margin:0;height:22px;"/> allows you to upload an entire folder.
+
+   c.<img src="/src/assets/syncBtn.png" style="display:inline;margin:0;height:22px;"/> allows you to synchronize a folder created via the Folders option.
+
+   d.<img src="/src/assets/addWebPageBtn.png" style="display:inline;margin:0;height:22px;"/> allows you to add a public web page.
+
+   e.<img src="/src/assets/addTextBtn.png" style="display:inline;margin:0;height:22px;"/> allows you to type text yourself.
+
+5. Try out the knowledge base by prompting a large language model and adding your
+knowledge base by clicking on the plus button on the bottom of the prompt box.
+
+
+**NOTE: Currently Nebula only supports simple file formats such as .txt, .md, and .pdf.
+Tables in PDF files cannot be read. We are working on a solution, thank you for
+understanding.**
+
+### Editing knowledge bases
+
+1. Navigate to the knowledge tab (Workspace -> Knowledge)
+2. Click on the knowledge base you want to edit. You can only edit knowledge bases that do not have the  <img src="/src/assets/readOnly.png" style="display:inline;margin:0;"/> tag.
+
+### Deleting knowledge bases
+
+1. Navigate to the knowledge tab (Workspace -> Knowledge).
+2. Click on the three horizontal dots next to your knowledge base. You can only delete knowledge bases that do not have the  <img src="/src/assets/readOnly.png" style="display:inline;margin:0;"/> tag.
+3. Click on **Delete**.
+
+     a. All files in the knowledge base are going to be removed from the server as soon as you delete the knowledge base, and within 7 days from all backups.
