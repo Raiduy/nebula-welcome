@@ -1,0 +1,53 @@
+---
+title: Advanced Parameters
+slug: advancedParams
+---
+
+The **Advanced Parameters** in Nebula allow you to refine the way the LLM works internally.
+See below the most useful parameters and how to modify them.
+
+## System Prompt
+
+- Explanation: The system prompt allows you to give the LLM a generic instruction that will be applied to all of the prompts you send.
+
+- Examples:
+
+      ○ I want to ask the LLM to generate some code in Python for me, so I will use the following system prompt: “You are a senior Python developer. Your task is to write energy-efficient code.”
+
+      ○ I want the LLM to review the contents of my paper: “You are an academic reviewer on the review board of a large LLM conference. Your task is to provide a comprehensive review of papers. You must give positive feedback and negative feedback. You must mark typos and unclear statements”
+
+- Recommendations:
+
+       ○ Use short and concise sentences when writing the system prompt
+
+       ○ If you use very long system prompts, modify the [context window]()
+
+## context window **(num_ctx)**
+
+● Default value: 2048 (roughly equivalent to 2000 words)
+
+● Allowed range: 2048 to 32768. DO NOT SET THE CONTEXT WINDOW TO MORE THAN 32768. Ignoring this will heavily impact the performance for both you and the other users.
+
+● Explanation: Defines how large the context window of the model is, that is, how many words it can remember in the conversation. This includes the prompt, system prompt, attached files, attached webpages and knowledge bases.
+
+● In other words: LLMs are like goldfish, they immediately forget, unless we explicitly tell them to remember more. By default, the LLMs in Nebula remember about 2000 words.
+
+## temperature **(temperature)**
+
+● Default value: 0.7
+
+● Allowed range: 0 to 1
+
+● Explanation: Allows you to control how “creative” the LLM is.
+
+● In other words: If you send the same prompt three times with a high temperature, the responses will be very different. If you send the same prompt three times with a low temperature, the responses will be similar.
+
+## max tokens **(max_tokens)**
+
+● Default value: -
+
+● Allowed range: 1 to anything
+
+● Explanation: Allows you to control how many tokens the LLM generates.
+
+● In other words: If you are looking to enforce short answers, set it to a low number, otherwise leave it as is.

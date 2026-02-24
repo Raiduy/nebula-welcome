@@ -24,12 +24,32 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Nebula Basic Use',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Nebula Basic Use', slug: `guides/example` },
-						{ label: 'Nebula Advanced Use', slug: `nebulaAdvancedUse` },
+						{ label: 'Getting to Know the Platform', slug: `guides/example` },
+						{ label: 'Changing Password', slug: `changingPassword` },
+						{ label: 'Saving Chats', slug: `savingChats` },
+						{ label: 'Setting a default System Prompt', slug: `settingDefaultPrompts` },
+						{ label: 'Knowledge Bases', slug: `knowledgeBases` },
+						{ label: 'Models', slug: `models` },
+						{ label: 'Prompts', slug: `prompts` },
+						
 					],
+				},
+				{
+					label: 'Nebula Advanced Use',
+					items:[
+						{ label: 'Advanced Parameters', slug: `advancedParams` },
+						{ label: 'Modifying Advanced Parameters', slug: `modifyingAdvancedParams` },
+					]
+				},
+				{
+					label: 'Nebula API Use',
+					items:[
+						{ label: 'Generating an API Key', slug: `generatingApiKey` },
+						{ label: 'Using Nebula via API', slug: `usingNebulaViaApi` },
+					]
 				},
 				{
 					label: 'Reference',
