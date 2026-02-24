@@ -3,9 +3,37 @@ title: Example Guide
 description: A guide in my new Starlight docs site.
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
 
-## Further reading
+**How will server load and usage be managed? AI models use quite some resources in terms of (processing) power.**
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+AIs are very demanding in terms of resources. As we are still in piloting mode (for now), the servers are working in a ‘best effort’ mode, as a request comes in, it is served. If too many requests come in there is a chance that the servers might be delayed, but we have not yet encountered this. However, to address this limitation, if a researcher has a high amount of processing to do, we can meet and discuss a private version of Nebula that is only available to them, so that they can run their research without any ‘external interference’.
+
+
+**How does it compare to other popular language AI models such as ChatGPT, Gemini, DeepSeek, etc.?**
+
+Nebula is a platform where we can deploy virtually any open-source model, so we are not limited to just running one model. The models we currently have running are DeepSeek-R1, Llama3.1, Gemma3 and GPT-OSS.
+
+
+**If no data is used for training, how scalable will this be?**
+
+No data is used for training because we do not want possibly sensitive information to end up in the memory of the models that we are using. In terms of scalability, we are constantly looking to expand our server capacity and the performance of the current hardware.
+
+
+**Can you attend one of our meetings and tell us about Nebula?**
+We would absolutely love to. Contact us at nebula.cs@vu.nl, and we’ll be there to present, discuss and answer all of your questions as best as we can.
+
+
+**It is locally hosted at the VU, so definitely better than some of the commercially available options. Has there been a ‘CIA-classification’ to find out which types of data can be used on your platform?**
+
+We do not have a CIA-classification for the platform, but we can give you a breakdown of what happens to data on the platform, and the steps we took to ensure the best privacy and security:
+All communication between users and Nebula is encrypted via TLS.
+All accounts in Nebula are generated using dummy emails, so even if there is a data leak, no work or private email addresses are going to be leaked.
+No user conversations are saved on the server, so in case of an attack, there is no data that can leak because there is no data stored.
+There is only one person with remote access to the server. Access to the server is only allowed through a private-public key combination which only that person has access to.
+
+
+**In what range should we be thinking regarding costs? Is this calculated based on usage or access?**
+
+Costs are calculated based on access, or per project, depending on the researchers’ preferences. We want to allow researchers the ability to rerun experiments if something goes wrong, rather than charge them again, like with usage-based costs. We have some tentative numbers, but we will consult with our current user base before we set the prices in stone.
+
+

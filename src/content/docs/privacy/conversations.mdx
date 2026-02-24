@@ -1,11 +1,13 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: Conversations
+description: Understanding what happens to your conversations with the LLMs in Nebula.
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+import { Aside } from '@astrojs/starlight/components';
 
-## Further reading
+Nebula **does not** save any of your conversations with the models unless saving is explicitly requested. Sometimes, the content of the prompt **may appear** in the system logs. These system logs are used to diagnose problems with the Nebula platform. The system logs are reset every two days.
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+<Aside>In other words, your conversations with LLMs can exist on the server for at most two days.</Aside>
+
+Nebula **does not** use any of your conversations to train or improve the models.
+
