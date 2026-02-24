@@ -2,10 +2,13 @@
 title: Models
 slug: models
 ---
-The Models tab allows you to create your own custom models by setting system prompts, attaching knowledge bases by default (no more need to click on the + button when prompting), or adjusting the advanced parameters. By attaching a knowledge base, you are creating a RAG system. See [here]() for the official documentation.
+
+import { Steps, Aside } from '@astrojs/starlight/components';
+
+The Models tab allows you to create your own custom models by setting system prompts, attaching knowledge bases by default (no more need to click on the + button when prompting), or adjusting the advanced parameters. By attaching a knowledge base, you are creating a RAG system. See [here](https://docs.openwebui.com/features/ai-knowledge/models) for the official documentation.
 
 ### Creating Models
-
+<Steps>
 1. Navigate to **Workspace**, then click on **Models**. You should see all the models created by other users that are public on Nebula.
 2. Click on the <img src="/src/assets/newModelBtn.png" style="display:inline;margin:0;"/> button on the top right of the screen.
 3. Follow the instructions on the screen for creating the Model.
@@ -14,16 +17,19 @@ The Models tab allows you to create your own custom models by setting system pro
 
     b. Please have a look at the [Advanced Parameters](), and [Modifying Advanced Parameters]() sections if you want to edit the advanced parameters section
 4. Click on **Save & Create**.
+</Steps>
 
 ### Editing Models
-
+<Steps>
 1. Navigate to the models tab (Workspace -> Models).
 2. On the model you want to edit, click on the  <img src="/src/assets/threeDots.png" height="20" style="margin:0; display: inline;"/>, then <img src="/src/assets/editBtn.png" height="15" style="margin:0; display: inline;"/> . You can only edit models that do not have the <img src="/src/assets/readOnly.png" height="20" style="margin:0; display: inline;"/> tag.
 3. Edit your model.
 4. Click on **Save & Update**.
+</Steps>
 
 ### Deleting Models
-
+<Steps>
 1. Navigate to the models tab (Workspace -> Models).
 2. Click on the three horizontal dots next to your knowledge base. You can only delete models that do not have the <img src="/src/assets/readOnly.png" height="20" style="margin:0; display: inline;"/>  tag.
 3. Click on **Delete**.
+</Steps>
