@@ -38,23 +38,24 @@ export default defineConfig({
 						{ label: 'Knowledge Bases', slug: `knowledgeBases` },
 						{ label: 'Models', slug: `models` },
 						{ label: 'Prompts', slug: `prompts` },
-						
+
 					],
 				},
 				{
 					label: 'Nebula Advanced Use',
-					items:[
+					items: [
 						{ label: 'Advanced Parameters', slug: `advancedParams` },
 						{ label: 'Modifying Advanced Parameters', slug: `modifyingAdvancedParams` },
 					]
 				},
 				{
 					label: 'Nebula API Use',
-					items:[
+					items: [
 						{ label: 'Generating an API Key', slug: `generatingApiKey` },
 						{ label: 'Using Nebula via API', slug: `usingNebulaViaApi` },
-        },
-        {
+					]
+				},
+				{
 					label: 'Privacy',
 					items: [
 						{ label: 'How does Nebula run?', slug: `privacy/running` },
