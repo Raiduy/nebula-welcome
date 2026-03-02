@@ -56,26 +56,40 @@ export default defineConfig({
 					]
 				},
 				{
-					label: 'Privacy',
-					items: [
-						{ label: 'How does Nebula run?', slug: `privacy/running` },
-						{ label: 'Encryption', slug: `privacy/encryption` },
-						{ label: 'Conversations', slug: `privacy/conversations` },
-						{ label: 'Knowledge Bases, Folders, and System Prompts', slug: `privacy/kb-f-sp` },
-						{ label: 'Who can access the servers?', slug: `privacy/server-access` },
+					label: 'Nebula Privacy',
+					items:[
+						{ label: 'Encryption', slug: `encryption` },
+						{ label: 'Conversations', slug: `conversations` },
+					    { label: 'Knowledge Bases, Folders and System Prompts', slug: `knowledgeFoldersPrompts` },
+						{ label: 'Who can access the Nebula system logs?', slug: `whoCanAccess` },
 					]
 				},
 				{
-					label: 'Security and Backup',
-					items: [
-						{ label: 'Security', slug: `security-and-backup/security` },
-						{ label: 'Backup', slug: `security-and-backup/backup` }
+					label: 'Nebula Security',
+					items:[
+						{ label: 'Security', slug: `security` },
+						
+					]
+				},
+				{
+					label: 'Nebula Backup',
+					items:[
+						{ label: 'Backup', slug: `backup` },
+						
 					]
 				},
 				{
 					label: 'FAQ',
-					items: [
-						{ label: 'FAQs', slug: `faqs/faq` }
+					items:[
+						{ label: 'FAQ', slug: `faq` },
+						
+					]
+				},
+				{
+					label: 'Getting Access to Nebula',
+					items:[
+						{ label: 'Getting Access', slug: `gettingAccess` },
+						
 					]
 				},
 				{
