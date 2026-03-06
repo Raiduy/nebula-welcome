@@ -12,11 +12,11 @@ export default defineConfig({
     trailingSlash: 'ignore',
     integrations: [
         starlight({
-            title: 'Welcome to Nebula',
-            logo: {
-                src: './src/assets/nebula-logo.png',
-                replacesTitle: true
-            },
+            title: 'Nebula User Docs',
+            // logo: {
+            //     src: './src/assets/nebula-logo.png',
+            //     replacesTitle: true
+            // },
             social: [
                 {
                     icon: 'puzzle',
