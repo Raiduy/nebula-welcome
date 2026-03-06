@@ -96,7 +96,7 @@ export default defineConfig({
                 // },
             ],
             customCss: [
-                './src/styles/customHero.css',
+                './src/styles/global.css',
             ],
             plugins: [
                 starlightThemeGalaxy()
