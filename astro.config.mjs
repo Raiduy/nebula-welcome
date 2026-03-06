@@ -2,6 +2,8 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightThemeGalaxy from 'starlight-theme-galaxy'
+import starlightUiTweaks from 'starlight-ui-tweaks';
+import starlightChangelogs from 'starlight-changelogs';
 
 import node from '@astrojs/node';
 
@@ -99,7 +101,14 @@ export default defineConfig({
                 './src/styles/global.css',
             ],
             plugins: [
-                starlightThemeGalaxy()
+                starlightThemeGalaxy(),
+                starlightUiTweaks({
+                    navbarLinks: [
+                        { label: "ChangeLog", href: "/welcome/changelog" },
+                        { label: "API Reference", href: "/welcome/customPage" },
+                    ],
+                }),
+                starlightChangelogs(),
             ]
         }),
     ],
