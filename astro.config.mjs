@@ -1,6 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightThemeGalaxy from 'starlight-theme-galaxy'
+import starlightUiTweaks from 'starlight-ui-tweaks';
+import starlightChangelogs from 'starlight-changelogs';
 
 import node from '@astrojs/node';
 
@@ -9,14 +12,13 @@ export default defineConfig({
     site: process.env.SITE_URL || "http://localhost:4321",
     base: process.env.SITE_BASE || "/welcome",
     trailingSlash: 'ignore',
-
     integrations: [
         starlight({
-            title: 'Welcome to Nebula',
-            logo: {
-                src: './src/assets/nebula-logo.png',
-                replacesTitle: true
-            },
+            title: 'Nebula User Docs',
+            // logo: {
+            //     src: './src/assets/nebula-logo.png',
+            //     replacesTitle: true
+            // },
             social: [
                 {
                     icon: 'puzzle',
@@ -41,7 +43,6 @@ export default defineConfig({
                         { label: 'Knowledge Bases', slug: `knowledgeBases` },
                         { label: 'Models', slug: `models` },
                         { label: 'Prompts', slug: `prompts` },
-
                     ],
                 },
                 {
@@ -71,28 +72,24 @@ export default defineConfig({
                     label: 'Security',
                     items: [
                         { label: 'Security', slug: `security` },
-
                     ]
                 },
                 {
                     label: 'Backup',
                     items: [
                         { label: 'Backup', slug: `backup` },
-
                     ]
                 },
                 {
                     label: 'FAQ',
                     items: [
                         { label: 'FAQ', slug: `faq` },
-
                     ]
                 },
                 {
                     label: 'Getting Access to Nebula',
                     items: [
                         { label: 'Getting Access', slug: `gettingAccess` },
-
                     ]
                 },
                 // {
@@ -100,6 +97,19 @@ export default defineConfig({
                 //     autogenerate: { directory: 'reference' },
                 // },
             ],
+            customCss: [
+                './src/styles/global.css',
+            ],
+            plugins: [
+                starlightThemeGalaxy(),
+                starlightChangelogs(),
+                starlightUiTweaks({
+                    navbarLinks: [
+                        { label: "ChangeLog", href: "/welcome/changelog" },
+                        // { label: "API Reference", href: "/welcome/customPage" },
+                    ],
+                }),
+            ]
         }),
     ],
 

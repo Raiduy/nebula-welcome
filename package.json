@@ -1,7 +1,7 @@
 {
   "name": "nebula-welcome",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Repository for the Nebula user documentation",
   "author": "Network Institute <network.institute.beta@vu.nl> (https://github.com/networkinstitutevu)",
   "license": "MIT",
@@ -25,6 +25,9 @@
     "@astrojs/node": "^9.5.4",
     "@astrojs/starlight": "^0.37.6",
     "astro": "^5.6.1",
-    "sharp": "^0.34.2"
+    "sharp": "^0.34.2",
+    "starlight-changelogs": "^0.4.0",
+    "starlight-theme-galaxy": "^0.7.0",
+    "starlight-ui-tweaks": "^0.2.2"
   }
 }
