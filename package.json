@@ -1,7 +1,7 @@
 {
   "name": "nebula-welcome",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Repository for the Nebula user documentation",
   "author": "Network Institute <network.institute.beta@vu.nl> (https://github.com/networkinstitutevu)",
   "license": "MIT",

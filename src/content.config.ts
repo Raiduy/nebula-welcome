@@ -8,9 +8,10 @@ export const collections = {
 	changelogs: defineCollection({
 		loader: changelogsLoader([
 			{
-				provider: 'changeset',
+				provider: 'keep-a-changelog',
 				base: 'changelog',
-				changelog: 'CHANGELOG.md',
+				changelog: 'src/changelogs/CHANGELOG.md',
+				title: 'Nebula Changelog',
 			},
 		]),
 	}),

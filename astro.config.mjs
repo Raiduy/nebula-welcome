@@ -102,13 +102,13 @@ export default defineConfig({
             ],
             plugins: [
                 starlightThemeGalaxy(),
+                starlightChangelogs(),
                 starlightUiTweaks({
                     navbarLinks: [
                         { label: "ChangeLog", href: "/welcome/changelog" },
-                        { label: "API Reference", href: "/welcome/customPage" },
+                        // { label: "API Reference", href: "/welcome/customPage" },
                     ],
                 }),
-                starlightChangelogs(),
             ]
         }),
     ],
