@@ -92,6 +92,12 @@ export default defineConfig({
                         { label: 'Getting Access', slug: `gettingAccess` },
                     ]
                 },
+                {
+                    label: 'Legal',
+                    items: [
+                        { label: 'Legal documents', slug: `legalDocs` },
+                    ]
+                },
                 // {
                 //     label: 'Reference',
                 //     autogenerate: { directory: 'reference' },
