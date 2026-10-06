@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightThemeGalaxy from 'starlight-theme-galaxy'
 import starlightUiTweaks from 'starlight-ui-tweaks';
-import starlightChangelogs from 'starlight-changelogs';
 
 import node from '@astrojs/node';
 
@@ -57,6 +56,7 @@ export default defineConfig({
                     items: [
                         { label: 'Generating an API Key', slug: `generatingApiKey` },
                         { label: 'Using Nebula via API', slug: `usingNebulaViaApi` },
+                        { label: 'Coding Agents on Nebula', slug: `codingAgentsOnNebula` },
                     ]
                 },
                 {
@@ -108,10 +108,8 @@ export default defineConfig({
             ],
             plugins: [
                 starlightThemeGalaxy(),
-                starlightChangelogs(),
                 starlightUiTweaks({
                     navbarLinks: [
-                        { label: "ChangeLog", href: "/welcome/changelog" },
                         // { label: "API Reference", href: "/welcome/customPage" },
                     ],
                 }),
