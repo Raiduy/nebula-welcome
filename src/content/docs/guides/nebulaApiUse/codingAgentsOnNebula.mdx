@@ -3,6 +3,202 @@ title: Coding Agents on Nebula
 slug: codingAgentsOnNebula
 ---
 
-Nebula is compatible with the OpenAI API standard, thus you can use the OpenAI package to send prompts to Nebula (very nice and convenient).
-Please check [this repository](https://github.com/networkinstitutevu/nebula-api-examples) for examples for how to use the API for different use cases.
-The repository is still in progress, we are doing our best to extend the list of API use examples as soon as possible.
+import { Steps, Aside, Code } from '@astrojs/starlight/components';
+import opencodeConfig from './coding-agents-examples/opencode.json?raw'
+import claudeConfig from './coding-agents-examples/nebula-in-claude.sh?raw'
+import piConfig from './coding-agents-examples/pi.json?raw'
+import ompConfig from './coding-agents-examples/omp.yml?raw'
+
+**Yes**, yes you can use Nebula to power your favourite coding agents.
+
+Below you can find full setup instructions for:
+- [OpenCode](#opencode-recommended)
+- [Claude Code](#claude-code)
+- [Pi](#pi)
+- [Oh-My-Pi](#oh-my-pi)
+
+## Prerequisites
+* Have your preferred coding agent **installed**
+* Have your **Nebula API key** ready (see how to get it [here](../generatingApiKey))
+
+## OpenCode (recommended)
+[OpenCode](https://opencode.ai/) is an open-source coding agent
+that provides a lot of capabilities right out of the box. 
+Unlike the majority of coding agents, OpenCode also has a 
+[Desktop version](https://opencode.ai/download#:~:text=OpenCode%20Desktop) 
+of their agent which allows you to use the agent without the 
+need to go into the terminal if that's something that you're 
+not comfortable with.
+
+### Configuration
+1. Find the `opencode.json` configuration file. This file will 
+allow us to add the models that we want to use as the backbone 
+for our agents.
+    <Aside type="note">
+    Depending on your operating system, this should be in 
+    either:
+        * **Linux / macOS / WSL**: `~/.config/opencode/opencode.json`
+        * **Windows**: `%APPDATA%\opencode\opencode.json`
+    </Aside>
+2. Modify or add to the contents of the `opencode.json` file to 
+include the following:
+    <Code code={opencodeConfig} lang="json" title="opencode.json" />
+
+3. Replace the API key placeholder (`REPLACE_WITH_YOUR_API_KEY`) 
+with your actual Nebula API key.
+
+4. Save the file.
+
+5. Open `opencode` and choose your desired model using the `/model` command.
+
+6. Enjoy Nebula via OpenCode.
+
+<Aside type="note">
+When adding models to your agents, make sure the model ID matches exactly to the one that you find online.
+</Aside>
+
+### Find out more
+You can dive deeper into what OpenCode is an what it can do in the official documentation available at [https://opencode.ai/v2/docs](https://opencode.ai/v2/docs)
+
+## Claude Code
+[Claude Code](https://claude.com/product/claude-code) is 
+Anthropic's propietary coding agent which a lot of people stand
+by. If you also find yourself in this group of people, then I'm
+**THRILLED** to let you know that you don't need to spend your 
+research budget on foreign big tech. You **CAN** use Nebula 
+models from Claude Code.
+
+### Configuration
+Claude Code is a little finnicky when it comes to 
+configurations, so please bear with me here. Since Claude 
+doesn't use the usual configuration files, we will have to 
+play around a little with environment variables.
+We have 2 ways to make this work.
+
+#### Option 1 - the environment (recommended)
+1. Your terminal uses a main configuration file when running.
+Depending on your operating system, this file exists under 
+different names, and we will have to edit it:
+    * **Linux / WSL**: Open terminal and edit `~/.bashrc`
+    * **macOS**: Open terminal and edit `~/.zshrc`
+    * **Windows**: Open PowerShell and edit `$PROFILE`
+
+2. In that file, add the following lines:
+    <Code code={claudeConfig} lang="bash" title=".bashrc/.zshrc/$PROFILE" />
+
+3. Source your file, or close and reopen the terminal.
+
+4. Run `claude`.
+
+5. Enjoy Nebula from Claude Code.
+
+#### Option 2 - the script [Linux / MacOS / WSL]
+
+1. Create a file called `launch-claude.sh`. 
+2. Paste the following contents to that file:
+    <Code code={claudeConfig} lang="bash" title="launch-claude.sh" />
+
+3. Replace the API key placeholder (`REPLACE_WITH_YOUR_API_KEY`)
+with your actual Nebula API key.
+
+4. Change the file permissions so that you can run it using
+`sudo chmod +x launch-claude.sh`
+
+5. Run the script using `./launch-claude.sh`.
+
+6. Now run `claude`.
+
+6. Enjoy Nebula from Claude Code.
+
+<Aside type="caution">
+The main limitation of using this script is that you will NEED 
+to run it every time you want to use Claude Code with Nebula.
+</Aside>
+
+### Find out more
+You can dive deeper into what Claude Code is an what it can do
+in the official documentation available at 
+[https://code.claude.com/docs/en/overview](https://code.claude.com/docs/en/overview)
+
+
+
+## Pi
+[Pi](https://pi.dev/) is an open-source coding agent
+that is by default very bare bones. This allows for 
+virtually endless customizability to tailor this 
+agent harness to exactly what the you want.
+From system prompts, to sub-agents, to skills, 
+everything has to be configured by you.
+
+### Configuration
+1. Find the `models.json` configuration file. This file will 
+allow us to add the models that we want to use as the backbone 
+for our agents.
+    <Aside type="note">
+    Depending on your operating system, this should be in 
+    either:
+        * **Linux / macOS / WSL**: `~/.omp/agent/models.json`
+        * **Windows**: `%USERPROFILE%\.omp\agent\models.json`
+    </Aside>
+2. Modify or add to the contents of the `models.json` file to 
+include the following:
+    <Code code={piConfig} lang="json" title="models.json" />
+
+3. Replace the API key placeholder (`REPLACE_WITH_YOUR_API_KEY`) 
+with your actual Nebula API key.
+
+4. Save the file.
+
+5. Start Pi using the `pi` command and choose your desired 
+model using the `/model` command.
+
+6. Enjoy Nebula via Pi.
+
+
+### Find out more
+You can dive deeper into what Pi is an what it can do in the
+official documentation available at 
+[https://pi.dev/docs/latest](https://pi.dev/docs/latest).
+
+
+
+## Oh-My-Pi
+[Oh My Pi](https://omp.sh/) is an open-source coding agent
+built on top of [Pi](#pi) (see above), and it is my (Radu)
+current go-to coding agent.
+
+### Configuration
+1. Find the `models.yml` configuration file. This file will 
+allow us to add the models that we want to use as the backbone 
+for our agents.
+    <Aside type="note">
+    Depending on your operating system, this should be in 
+    either:
+        * **Linux / macOS / WSL**: `~/.omp/agent/models.yml`
+        * **Windows**: `%USERPROFILE%\.omp\agent\models.yml`
+    </Aside>
+2. Modify or add to the contents of the `models.yml` file to 
+include the following:
+    <Code code={ompConfig} lang="yaml" title="models.yml" />
+
+3. Replace the API key placeholder (`REPLACE_WITH_YOUR_API_KEY`) 
+with your actual Nebula API key.
+
+4. Save the file.
+
+5. Start Oh My Pi using the `omp` command and choose your 
+desired model using the `/model` command.
+
+6. Enjoy Nebula via Oh My Pi.
+
+### Find out more
+You can dive deeper into what Oh My Pi is an what it can do
+in the official documentation available at 
+[https://omp.sh/docs](https://omp.sh/docs).
+
+
+
+## Conclusions
+Now you should have your coding agents running smoothly 
+through Nebula. Huge congratulations! You took yet another 
+huge step towards relying less on big tech.
