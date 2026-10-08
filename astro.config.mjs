@@ -57,6 +57,7 @@ export default defineConfig({
                         { label: 'Generating an API Key', slug: `generatingApiKey` },
                         { label: 'Using Nebula via API', slug: `usingNebulaViaApi` },
                         { label: 'Coding Agents on Nebula', slug: `codingAgentsOnNebula` },
+                        { label: 'Integrations with Nebula', slug: `integrations-with-nebula` },
                     ]
                 },
                 {
