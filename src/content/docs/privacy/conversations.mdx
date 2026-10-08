@@ -1,13 +1,7 @@
 ---
 title: Conversations
-description: Understanding what happens to your conversations with the LLMs in Nebula.
+slug: conversations
 ---
 
-import { Aside } from '@astrojs/starlight/components';
-
-Nebula **does not** save any of your conversations with the models unless saving is explicitly requested. Sometimes, the content of the prompt **may appear** in the system logs. These system logs are used to diagnose problems with the Nebula platform. The system logs are reset every two days.
-
-<Aside>In other words, your conversations with LLMs can exist on the server for at most two days.</Aside>
-
-Nebula **does not** use any of your conversations to train or improve the models.
-
+Nebula does not save any of your conversations with the models unless saving is explicitly requested. In rare cases, the content of the prompt may appear in the system logs. These system logs are used to diagnose problems with the Nebula platform. The system logs are deleted every two days.
+Nebula does not use any of your conversations to train or improve the models.

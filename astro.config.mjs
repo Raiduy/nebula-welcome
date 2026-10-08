@@ -20,7 +20,7 @@ export default defineConfig({
             // },
             social: [
                 {
-                    icon: 'puzzle',
+                    icon: 'link',
                     label: 'Nebula',
                     href: 'https://nebula.cs.vu.nl',
                 },
@@ -35,11 +35,11 @@ export default defineConfig({
                     label: 'Basic Use',
                     items: [
                         // Each item here is one entry in the navigation menu.
-                        { label: 'Getting to Know the Platform', slug: `gettingToKnowPlatform` },
-                        { label: 'Changing Password', slug: `changingPassword` },
-                        { label: 'Saving Chats', slug: `savingChats` },
-                        { label: 'Setting a default System Prompt', slug: `settingDefaultPrompts` },
-                        { label: 'Knowledge Bases', slug: `knowledgeBases` },
+                        { label: 'Getting to Know the Platform', slug: `getting-to-know-platform` },
+                        { label: 'Changing Password', slug: `changing-password` },
+                        { label: 'Saving Chats', slug: `saving-chats` },
+                        { label: 'Setting a default System Prompt', slug: `setting-default-prompts` },
+                        { label: 'Knowledge Bases', slug: `knowledge-bases` },
                         { label: 'Models', slug: `models` },
                         { label: 'Prompts', slug: `prompts` },
                     ],
@@ -47,16 +47,16 @@ export default defineConfig({
                 {
                     label: 'Advanced Use',
                     items: [
-                        { label: 'Advanced Parameters', slug: `advancedParams` },
-                        { label: 'Modifying Advanced Parameters', slug: `modifyingAdvancedParams` },
+                        { label: 'Advanced Parameters', slug: `advanced-params` },
+                        { label: 'Modifying Advanced Parameters', slug: `modifying-advanced-params` },
                     ]
                 },
                 {
                     label: 'API Use',
                     items: [
-                        { label: 'Generating an API Key', slug: `generatingApiKey` },
-                        { label: 'Using Nebula via API', slug: `usingNebulaViaApi` },
-                        { label: 'Coding Agents on Nebula', slug: `codingAgentsOnNebula` },
+                        { label: 'Generating an API Key', slug: `generating-api-key` },
+                        { label: 'Using Nebula via API', slug: `using-nebula-via-api` },
+                        { label: 'Coding Agents on Nebula', slug: `coding-agents-on-nebula` },
                         { label: 'Integrations with Nebula', slug: `integrations-with-nebula` },
                     ]
                 },
@@ -65,20 +65,15 @@ export default defineConfig({
                     items: [
                         { label: 'Encryption', slug: `encryption` },
                         { label: 'Conversations', slug: `conversations` },
-                        { label: 'Knowledge Bases, Folders and System Prompts', slug: `knowledgeFoldersPrompts` },
-                        { label: 'Who can access the Nebula system logs?', slug: `whoCanAccess` },
+                        { label: 'Knowledge Bases, Folders and System Prompts', slug: `knowledge-folders-prompts` },
+                        { label: 'Who can access the Nebula system logs?', slug: `who-can-access` },
                     ]
                 },
                 {
-                    label: 'Security',
+                    label: 'Security and Backup',
                     items: [
                         { label: 'Security', slug: `security` },
-                    ]
-                },
-                {
-                    label: 'Backup',
-                    items: [
-                        { label: 'Backup', slug: `backup` },
+                        { label: 'Backups', slug: `backups` }
                     ]
                 },
                 {
@@ -90,7 +85,7 @@ export default defineConfig({
                 {
                     label: 'Getting Access to Nebula',
                     items: [
-                        { label: 'Getting Access', slug: `gettingAccess` },
+                        { label: 'Getting Access', slug: `getting-access` },
                     ]
                 },
                 {
