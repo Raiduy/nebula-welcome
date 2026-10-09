@@ -1,9 +1,9 @@
 /* Dark mode colors. */
 :root {
 	--sl-font: 'Archivo', sans-serif;
-	--sl-color-accent-low: #301445;
-	--sl-color-accent: #9400dc;
-	--sl-color-accent-high: #d9b9f6;
+	--sl-color-accent-low: #a191c5;
+	--sl-color-accent: #ef804a;
+	--sl-color-accent-high: #ef804a;
 	--sl-color-white: #ffffff;
 	--sl-color-gray-1: #eeeeee;
 	--sl-color-gray-2: #c8c8c8;
@@ -16,9 +16,9 @@
 /* Light mode colors. */
 :root[data-theme='light'] {
 	--sl-font: 'Archivo', sans-serif;
-	--sl-color-accent-low: #e3ccfa;
-	--sl-color-accent: #7e00bc;
-	--sl-color-accent-high: #451465;
+	--sl-color-accent-low: #b466a5;
+	--sl-color-accent: #00abd7;
+	--sl-color-accent-high: #b466a5;
 	--sl-color-white: #181818;
 	--sl-color-gray-1: #272727;
 	--sl-color-gray-2: #383838;
@@ -35,7 +35,7 @@
     --galaxy-button-border-radius: 0.75rem;
     --galaxy-button-shadow-primary: 0 4px 16px rgba(var(--sl-color-accent), 0.25), 0 2px 8px rgba(var(--sl-color-accent), 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     --galaxy-card-transition-fast: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-    --galaxy-button-primary-gradient: linear-gradient(135deg, var(--sl-color-accent) 0%, var(--sl-color-accent) 100%);
+    --galaxy-button-primary-gradient: var(--sl-color-accent);
   }
 }
 
@@ -51,6 +51,19 @@ button, .sl-button, .sl-button-primary, .sl-button-minimal {
   font-family: 'Archivo', sans-serif !important;
 }
 
-/* .hero { */
-/*     background-color: white; */
-/* } */
+/* Neutralize common text gradient patterns */
+* {
+  -webkit-text-fill-color: currentColor !important;
+  text-fill-color: currentColor !important;
+}
+
+/* Ensure buttons use solid colors */
+.sl-button-primary {
+  background: var(--sl-color-accent) !important;
+  background-image: none !important;
+}
+
+/* Allow specifically defined gradients that are not text-based */
+.sl-button-primary {
+  background: var(--sl-color-accent) !important;
+}
