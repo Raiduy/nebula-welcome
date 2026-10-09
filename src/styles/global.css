@@ -30,6 +30,15 @@
 	--sl-color-black: #ffffff;
 }
 
+/* Light mode background image */
+html[data-theme='light'][data-has-hero] body {
+  background-image: url('/src/assets/Nebula_Gradients_lightviolet.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 @layer galaxy {
   :root {
     --galaxy-button-border-radius: 0.75rem;
