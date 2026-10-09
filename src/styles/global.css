@@ -1,5 +1,6 @@
 /* Dark mode colors. */
 :root {
+	--sl-font: 'Archivo', sans-serif;
 	--sl-color-accent-low: #301445;
 	--sl-color-accent: #9400dc;
 	--sl-color-accent-high: #d9b9f6;
@@ -14,6 +15,7 @@
 }
 /* Light mode colors. */
 :root[data-theme='light'] {
+	--sl-font: 'Archivo', sans-serif;
 	--sl-color-accent-low: #e3ccfa;
 	--sl-color-accent: #7e00bc;
 	--sl-color-accent-high: #451465;
@@ -34,7 +36,19 @@
     --galaxy-button-shadow-primary: 0 4px 16px rgba(var(--sl-color-accent), 0.25), 0 2px 8px rgba(var(--sl-color-accent), 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     --galaxy-card-transition-fast: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
     --galaxy-button-primary-gradient: linear-gradient(135deg, var(--sl-color-accent) 0%, var(--sl-color-accent) 100%);
-    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'CLT-Mattone', sans-serif !important;
+}
+
+body {
+  font-family: 'Archivo', sans-serif;
+}
+
+button, .sl-button, .sl-button-primary, .sl-button-minimal {
+  font-family: 'Archivo', sans-serif !important;
 }
 
 /* .hero { */

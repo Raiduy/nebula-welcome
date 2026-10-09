@@ -102,6 +102,7 @@ export default defineConfig({
                 // },
             ],
             customCss: [
+                './src/styles/font-face.css',
                 './src/styles/global.css',
             ],
             plugins: [
