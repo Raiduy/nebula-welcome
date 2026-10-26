@@ -14,10 +14,12 @@ export default defineConfig({
     integrations: [
         starlight({
             title: 'Nebula User Docs',
-            // logo: {
-            //     src: './src/assets/nebula-logo.png',
-            //     replacesTitle: true
-            // },
+            logo: {
+                light: './src/assets/identity/Nebula_Logo_colors.svg',
+                dark: './src/assets/identity/Nebula_Logo_white.svg',
+                replacesTitle: true
+            },
+            favicon: '/nebula.svg',
             social: [
                 {
                     icon: 'link',
@@ -100,6 +102,7 @@ export default defineConfig({
                 // },
             ],
             customCss: [
+                './src/styles/font-face.css',
                 './src/styles/global.css',
             ],
             plugins: [
