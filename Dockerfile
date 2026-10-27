@@ -1,6 +1,12 @@
 FROM node:lts AS runtime
 WORKDIR /app
 
+ARG SITE_URL
+ARG SITE_BASE
+
+ENV SITE_URL=$SITE_URL
+ENV SITE_BASE=$SITE_BASE
+
 COPY . .
 
 RUN npm install
