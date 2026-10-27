@@ -4,12 +4,19 @@ import starlight from '@astrojs/starlight';
 import starlightThemeGalaxy from 'starlight-theme-galaxy'
 import starlightUiTweaks from 'starlight-ui-tweaks';
 
+import { loadEnv } from 'vite';
 import node from '@astrojs/node';
+
+const env = loadEnv(process.env.NODE_ENV || 'development', process.cwd(), '');
 
 // https://astro.build/config
 export default defineConfig({
-    site: process.env.SITE_URL || "http://localhost:4321",
-    base: process.env.SITE_BASE || "/welcome",
+    site: env.SITE_URL,
+    base: env.SITE_BASE,
+    redirects: {
+        '/generatingApiKey': `/${env.SITE_BASE}/generating-api-key`,
+        '/changingPassword': `/${env.SITE_BASE}/changing-password`,
+    },
     trailingSlash: 'ignore',
     integrations: [
         starlight({
@@ -113,8 +120,7 @@ export default defineConfig({
                     ],
                 }),
             ]
-        }),
-    ],
+        })],
 
     adapter: node({
         mode: 'standalone',
