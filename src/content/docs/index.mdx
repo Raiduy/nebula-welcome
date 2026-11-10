@@ -21,9 +21,28 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Highlights
+<div class="highlight-box">
+    # Access Nebula
+    
+    Not sure which to press? Then your account is probably on Try Nebula.
 
-<CardGrid stagger>
+    <CardGrid class="big-buttons-grid">
+      <a href="https://pro.nebula.cs.vu.nl" target="_blank" class="card-link">
+        <Card title="Pro Nebula" icon="rocket">
+          For production use with full features
+        </Card>
+      </a>
+      <a href="https://try.nebula.cs.vu.nl" target="_blank" class="card-link">
+        <Card title="Try Nebula" icon="star">
+          Test drive the platform without commitment
+        </Card>
+      </a>
+    </CardGrid>
+</div>
+
+# Highlights
+
+<CardGrid>
 	<Card title="Request Access to Nebula" icon="document">
 		To access Nebula, fill in 
         <a href="https://forms.gle/8ziuLPTWYivdf2em9" target='_blank'>this form</a>.

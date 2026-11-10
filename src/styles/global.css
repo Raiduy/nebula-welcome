@@ -76,3 +76,45 @@ button, .sl-button, .sl-button-primary, .sl-button-minimal {
 .sl-button-primary {
   background: var(--sl-color-accent) !important;
 }
+
+/* Card link styling - for clickable cards in the big buttons section */
+.big-buttons-grid {
+  margin: 2rem 0;
+}
+
+.big-buttons-grid .card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.big-buttons-grid .card {
+  height: 100%;
+  cursor: pointer;
+  padding: 2rem;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.big-buttons-grid .card-link:hover {
+  transform: translateY(-4px);
+}
+
+.big-buttons-grid .card:hover {
+  border-color: var(--sl-color-accent) !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15) !important;
+}
+
+.highlight-box {
+  border: 2px solid var(--sl-color-accent) !important;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+[data-theme='light'] .highlight-box {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
