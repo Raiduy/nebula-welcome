@@ -110,11 +110,15 @@ button, .sl-button, .sl-button-primary, .sl-button-minimal {
 }
 
 .highlight-box {
-  border: 2px solid var(--sl-color-accent) !important;
+  position: relative;
   padding: 1rem;
   border-radius: 0.5rem;
+  border: 4px solid transparent;
+  border-image: repeating-linear-gradient(45deg, var(--sl-color-accent) 0 25px, transparent 25px 50px) 30 round;
 }
-[data-theme='light'] .highlight-box {
+.highlight-box {
+  border: 4px solid transparent;
+  border-image: repeating-linear-gradient(-45deg, var(--sl-color-accent) 0 50px, transparent 50px 100px) 30 round;
   padding: 1rem;
   border-radius: 0.5rem;
 }
